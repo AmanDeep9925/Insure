@@ -1,0 +1,181 @@
+/* * Listing the font families */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Rubik:wght@300&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* margin: ; */
+  /* padding: 0; */
+}
+
+:root {
+  --dark-violet: #2d2640;
+  --grayish-blur: #95a9c6;
+
+  --very-dark-violet: #2b272f;
+  --dark-grayish-violet: #837d87;
+  --very-light-gray: #fafafa;
+
+  --hw: 400;
+  --sw: 400;
+  --lw: 700;
+
+  --fs: 16px;
+  --hf: "Karla", sans-serif;
+  --tf: "Karla", sans-serif;
+}
+
+body {
+  width: 100%;
+  font-size: var(--fs);
+  display: grid;
+  grid-template-rows: 100px auto 200px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+/* * Header section styling */
+
+#header {
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  max-width: 20%;
+  width: 200px;
+  padding: 2rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar-desktop {
+  max-width: 70%;
+  width: 800px;
+  padding: 1.2rem;
+}
+
+.navbar-desktop .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list .nav-item {
+  font-size: 1.5rem;
+  font-family: var(--tf);
+  font-weight: var(--lw);
+  color: var(--dark-grayish-violet);
+}
+
+.nav-item.plans {
+  border: 2px solid var(--dark-violet);
+  font-weight: var(--lw);
+  padding: 1rem 2.2rem;
+  color: var(--dark-violet);
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.plans:hover,
+.plans:focus {
+  color: var(--very-light-gray);
+  background-color: var(--dark-violet);
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  #header {
+    padding: 1rem;
+  }
+
+  #header .logo {
+    max-width: 20%;
+    width: 110px;
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .navbar-desktop {
+    min-width: 50%;
+    max-width: 70%;
+    padding: 1rem;
+  }
+
+  .nav-list .nav-item {
+    font-size: 1rem;
+  }
+  .nav-item.plans {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-rows: auto auto auto;
+  }
+
+  #header {
+    display: block;
+  }
+
+  #header .logo {
+    max-width: 30%;
+    width: auto;
+    position: relative;
+    background-color: white;
+  }
+
+  .logo::after {
+    content: url("../../images/icon-close.svg");
+    position: fixed;
+    right: 3rem;
+    top: 2rem;
+  }
+
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+    background: var(--dark-violet);
+  }
+
+  .navbar-mobile .nav-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-list .nav-item {
+    margin: 1.2rem 2rem;
+    color: #fafafa;
+  }
+
+  .nav-item.plans {
+    border: 2px solid white;
+  }
+}
