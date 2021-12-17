@@ -158,7 +158,151 @@ body {
   float: right;
 }
 
+#plans-section {
+  padding: rem;
+}
 
+#plans-section h1 {
+  font-size: 5.2rem;
+  margin: 4rem 3rem;
+}
+
+#plans-section hr {
+  width: 33%;
+  border: 1px solid var(--dark-grayish-violet);
+  float: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cards-container .card {
+  margin: 0 2rem;
+  padding: 2rem;
+  max-width: 33%;
+  width: 40%;
+}
+
+.card h3 {
+  font-size: 2.2rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--dark-grayish-violet);
+}
+
+#findoutmore-section {
+  min-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  background: var(--very-dark-violet);
+  background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+  background-size: contain;
+}
+#findoutmore-section h1 {
+  font-size: 4.2rem;
+  width: 55%;
+  color: var(--very-light-gray);
+}
+
+#findoutmore-section .btn-how-we-work {
+  padding: 1rem 3rem;
+  width: auto;
+  background: none;
+  border: 1px solid var(--very-light-gray);
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+#footer-section {
+  height: fit-content;
+  margin-top: 6rem;
+  background-color: var(--very-light-gray);
+  background-image: url(../../images/bg-pattern-footer-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+#navbar-section {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem 2rem;
+  margin: 0 auto;
+}
+
+.footer-cards {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+#navbar-section {
+  border-bottom: 2px solid var(--dark-grayish-violet);
+}
+
+#navbar-section .logo {
+  flex: 3;
+}
+
+.logo img {
+  width: auto;
+}
+.navbar-footer {
+  flex: 1;
+}
+
+.navbar-footer #nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.list-card {
+  width: 20%;
+  height: auto;
+  padding: 0 2rem;
+  align-self: center;
+}
+
+.list-card h4 {
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+  font-family: var(--tf);
+  font-size: 1.5rem;
+}
+
+.list-card .footerlist {
+  padding: 0;
+  list-style: none;
+}
+
+.footerlist .list-item {
+  padding: 1rem 0;
+  font-family: var(--hf);
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
 @media only screen and (max-width: 1024px) {
   body {
@@ -213,6 +357,60 @@ body {
   .image--section img {
     width: 90%;
     float: right;
+  }
+
+  #plans-section h1 {
+    font-size: 5.2rem;
+    position: relative;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards-container .card {
+    margin: 2rem;
+    padding: 2rem;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  .card p {
+    max-width: 500px;
+  }
+
+  #findoutmore-section {
+    flex-direction: column;
+    background-size: 100%;
+  }
+
+  #findoutmore-section h1 {
+    width: 100%;
+    font-size: 3.2rem;
+  }
+
+  #navbar-section .logo {
+    flex: 2;
+  }
+
+  .navbar-footer {
+    flex: 1;
+  }
+
+  .footer-cards {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .list-card {
+    width: 20%;
+    height: auto;
+    padding: 0 2rem;
+    align-self: center;
+    text-align: center;
   }
 }
 
@@ -299,5 +497,38 @@ body {
 
   .about p {
     font-size: 0.8rem;
+  }
+
+  #plans-section h1 {
+    font-size: 4.2rem;
+    position: relative;
+  }
+
+  .cards-container .card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  #navbar-section .logo {
+    flex: 1;
+  }
+
+  .navbar-footer {
+    flex: 1;
+  }
+
+  .footer-cards {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .list-card {
+    width: 100%;
+    height: auto;
+    padding: 0 2rem;
+    align-self: center;
+    text-align: center;
   }
 }
